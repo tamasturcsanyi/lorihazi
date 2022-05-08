@@ -10,5 +10,10 @@ namespace Feleves_QWCWY4.Models
     internal class Megrendelo : Icsomopont
     {
         public int ID { get; set; }
+
+        public Megrendelo(int id)
+        {
+            ID = id;
+        }
     }
 }

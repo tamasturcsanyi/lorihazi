@@ -54,6 +54,7 @@
     <Compile Include="Models\GraphEl.cs" />
     <Compile Include="Models\Kamion.cs" />
     <Compile Include="Models\Motor.cs" />
+    <Compile Include="Models\TesztAdatok.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

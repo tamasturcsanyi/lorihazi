@@ -11,6 +11,11 @@ namespace Feleves_QWCWY4.Models
     {
         public int ID { get; set; }
 
+        public Raktar(int id)
+        {
+            ID = id;
+        }
+
         internal void AddCsomag(Csomag csomag)
         {
             csomagok.Add(csomag);
@@ -26,24 +31,6 @@ namespace Feleves_QWCWY4.Models
 
         void BTS(List<Ijarmu> jarmuvek, int szint, Ijarmu[] e) //jarmuhoh hozzatartozo rendelkezesre allo teherbiras
         {
-            //int i = -1;
-            //while (!van && i < r[szint].Length - 1)
-            //{
-            //    i++;
-            //    if (Fk(szint, r[szint][i], e))
-            //    {
-            //        e[szint] = r[szint][i];
-            //        if (szint == r.Length - 1)
-            //        {
-            //            van = true;
-            //        }
-            //        else
-            //        {
-            //            BTS(r, szint + 1, e);
-            //        }
-            //    }
-            //}
-
             int i = -1;
             while (i < csomagok.Count - 1)
             {
@@ -55,6 +42,7 @@ namespace Feleves_QWCWY4.Models
                 }
             }
         }
+
         bool Befer(Ijarmu ijarmu, Csomag csomag, Ijarmu[] e)
         {
             int sulyJarmuben = 0;
@@ -68,19 +56,6 @@ namespace Feleves_QWCWY4.Models
             }
 
             return ijarmu.Befer(sulyJarmuben + csomag.Suly);
-
-
-            //bool ok = true;
-            //for (int i = 0; i < szint; i++)
-            //{
-            //    if (e[i] == nev)
-            //    {
-            //        ok = false;
-            //    }
-            //}
-            //return ok;
         }
-
-
     }
 }

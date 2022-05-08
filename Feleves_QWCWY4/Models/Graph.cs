@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Feleves_QWCWY4.Models
 {
-    internal class Graph
+    public class Graph
     {
         private Dictionary<int,Icsomopont> Csomopontok { get; set; } //Új csomópontok hozzáadása innen
         private List<GraphEl> Elek { get; set; } //Új elek felvetele innen
@@ -22,14 +22,14 @@ namespace Feleves_QWCWY4.Models
             Csomopontok.Add(ujCsomopont.ID,ujCsomopont);
         }
 
-        public void AddGraphEl(GraphEl UjGraphEl)
+        public void AddGraphEl(int suly, int honnan, int hova)
         {
-            if (UjGraphEl is null)
+            if (honnan == hova)
             {
-                throw new ArgumentNullException(nameof(UjGraphEl)); // SAJÁT KIVÉTEL OSZTÁLY
+                throw new ArgumentException("Invalid argumentumok"); // SAJÁT KIVÉTEL OSZTÁLY
             }
 
-            Elek.Add(UjGraphEl);
+            Elek.Add(new GraphEl(suly, Csomopontok[honnan], Csomopontok[hova]));
         }
         public void AddJarmu(Ijarmu ujJarmu)
         {

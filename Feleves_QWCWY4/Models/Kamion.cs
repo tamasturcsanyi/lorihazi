@@ -9,11 +9,11 @@ namespace Feleves_QWCWY4.Models
 {
     internal class Kamion : JarmuBase
     {
-        public Kamion(int id)
+        public Kamion(int id, int kezdo)
         {
             MaxTeherbiras = 15000;
-            Raktar = 5;
-            TartozkodasiHely = 5;
+            Raktar = kezdo;
+            TartozkodasiHely = kezdo;
             Id = id;
         }
 
