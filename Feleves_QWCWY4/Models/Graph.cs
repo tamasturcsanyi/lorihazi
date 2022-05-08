@@ -49,6 +49,7 @@ namespace Feleves_QWCWY4.Models
             }
 
             Raktar raktar = Csomopontok[csomag.Raktar] as Raktar;
+
             if (raktar != null)
             {
                 raktar.AddCsomag(csomag);
@@ -62,7 +63,7 @@ namespace Feleves_QWCWY4.Models
         }
         public List<Icsomopont> legrovidebbUt(int honnan, int hova)
         {
-
+            return null;
         }
 
         

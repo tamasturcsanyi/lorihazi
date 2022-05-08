@@ -10,11 +10,12 @@ namespace Feleves_QWCWY4.Models
     internal class Auto : JarmuBase
     {
 
-        public Auto()
+        public Auto(int id)
         {
             MaxTeherbiras = 50;
             Raktar = 10;
             TartozkodasiHely = 10;
+            Id = id;
         }
 
     }

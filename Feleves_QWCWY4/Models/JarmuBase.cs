@@ -13,5 +13,29 @@ namespace Feleves_QWCWY4.Models
         public int Raktar { get; set; }
         public int TartozkodasiHely { get; set; }
         public List<Csomag> Csomagok { get; set; }
+        public int Id { get; set; } //Kell
+
+        private int CsomagSuly 
+        {
+            get
+            {
+                if (Csomagok != null)
+                {
+                    int s = 0;
+
+                    foreach (Csomag item in Csomagok)
+                    {
+                        s += item.Suly;
+                    }
+                    return s;
+                }
+                return 0;
+            }
+        }
+        
+        public bool Befer(int suly)
+        {
+            return CsomagSuly+suly < MaxTeherbiras; //ha nagyobb, nincs hova pakolni
+        }
     }
 }

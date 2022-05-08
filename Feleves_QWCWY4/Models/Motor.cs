@@ -10,11 +10,12 @@ namespace Feleves_QWCWY4.Models
     public class Motor : JarmuBase
     {
 
-        public Motor()
+        public Motor(int id)
         {
             MaxTeherbiras = 1;
             Raktar = 1;
             TartozkodasiHely = 1;
+            Id = id;
         }
 
     }
